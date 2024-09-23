@@ -8,7 +8,7 @@ import cv2
 import logging
 
 
-app = FastAPI()
+app = FastAPI(timeout = 600)
 
 
 
