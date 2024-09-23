@@ -46,17 +46,19 @@ def read_image(data)->np.ndarray:
 @app.post("/predictions")
 async def predict(file:UploadFile=File(...)):
     try:
-        bytes = await file.read()
-        img = read_image(bytes)
-        img_batch = np.expand_dims(img,0)
-        result_list = []
+        # bytes = await file.read()
+        # img = read_image(bytes)
+        # img_batch = np.expand_dims(img,0)
+        # result_list = []
 
-        prediction = MODEL.predict(img_batch)
-        confidence = np.argmax(prediction)
-        result = CLASSES[confidence]
-        result_list = [result,str(prediction[0][confidence])]
-        return {"Result":result_list[0],
-                "Accuracy":result_list[1]}
+        # prediction = MODEL.predict(img_batch)
+        # confidence = np.argmax(prediction)
+        # result = CLASSES[confidence]
+        # result_list = [result,str(prediction[0][confidence])]
+        # return {"Result":result_list[0],
+        #         "Accuracy":result_list[1]}
+        return {"Result":"successfully opened",
+                "Accuracy":file.filename}
     except Exception as e:
         return {"Result":"Error",
                 "Accuracy":e}
