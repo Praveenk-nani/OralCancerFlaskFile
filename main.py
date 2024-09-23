@@ -17,7 +17,10 @@ origins = [
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,  # Allows specific origins
+    allow_origins=[
+    "http://127.0.0.1:3000",
+    "http://localhost:3000"
+],  # Allows specific origins
     allow_credentials=True,
     allow_methods=["*"],  # Allows all methods (GET, POST, PUT, DELETE)
     allow_headers=["*"],  # Allows all headers
@@ -37,7 +40,7 @@ def read_image(data)->np.ndarray:
         image = np.array(Image.open(BytesIO(data)))
         return image
     except Exception as e:
-        return np.array(e)
+        raise ValueError(f"while processing image : {e}")
 
 
 @app.post("/predictions")
@@ -54,6 +57,6 @@ async def predict(file:UploadFile=File(...)):
         result_list = [result,str(prediction[0][confidence])]
         return {"Result":result_list[0],
                 "Accuracy":result_list[1]}
-    except:
+    except Exception as e:
         return {"Result":"Error",
-                "Accuracy":"Error"}
+                "Accuracy":e}
