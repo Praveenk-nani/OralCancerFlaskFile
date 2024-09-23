@@ -4,3 +4,4 @@ numpy
 fastapi
 gunicorn
 python-multipart
+uvicorn
