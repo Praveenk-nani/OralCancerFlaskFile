@@ -1,0 +1,6 @@
+tensorflow
+fastapi
+numpy
+os
+logging
+pillow

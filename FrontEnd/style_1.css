@@ -1,0 +1,138 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+/* Section */
+section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #34495e;
+}
+
+/* Upload Section */
+#upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#file-input {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #f0f0f0;
+}
+
+/* Button Styles */
+.btn {
+    padding: 12px 24px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1f5c7b;
+}
+
+/* Result Section */
+#result-section {
+    display: none;
+    text-align: center;
+}
+
+#result {
+    padding: 20px;
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #2c3e50;
+}
+
+/* Tooltip */
+#tooltip {
+    position: absolute;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 9999;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Hover Link */
+#hoverLink {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#hoverLink:hover {
+    color: #e74c3c;
+    font-weight: 900;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+
+    #file-input {
+        width: 100%;
+    }
+}

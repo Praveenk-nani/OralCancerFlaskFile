@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oral Cancer Detection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_1.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Oral Cancer Detection</h1>
+    </header>
+
+    <section id="upload-section">
+      <h2>Upload <a href="https://en.wikipedia.org/wiki/Histopathology" id="hoverLink">Histopathological</a> Image</h2>
+      <input type="file" id="file-input">
+      <button class="btn" onclick="uploadImage()">Upload</button>
+    </section>
+
+    <section id="result-section">
+      <h2>Result</h2>
+      <div id="result"></div>
+    </section>
+  </div>
+
+  <div id="tooltip" class="hidden">
+    <h3>Details about Histopathological images.</h3>
+    <p>These images are used in medical diagnostics to study tissues and cells.</p>
+    <p style="color: blue;">Histopathological images are microscopic images of the tissues used in disease analysis</p>
+  </div>
+
+  <script src="script_1.js"></script>
+</body>
+</html>
